@@ -1,0 +1,13 @@
+<h1>Use #<%= @use.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @use.name %></p>
+</div>
+<div>
+  <strong>Email</strong>:<br />
+  <p><%= @use.email %></p>
+</div>
+
+<a href="/uses/<%= @use.id %>/edit">Edit</a> |
+<a href="/uses/<%= @use.id %>/destroy">Destroy</a>

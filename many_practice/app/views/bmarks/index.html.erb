@@ -1,0 +1,33 @@
+<h1>Users</h1>
+
+<p><a href="/new_bmark">Add a New User</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Url</th>
+      <th>Desc</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @bmarks.each do |bmark| %>
+    <tr>
+          <td><%= bmark.name %></td>
+          <td><%= bmark.url %></td>
+          <td><%= bmark.desc %></td>
+          <td><%= bmark.user_id %></td>
+          <td><a href="/bmarks/<%= bmark.id %>">Show</a>
+        </td>
+      <td><a href="/bmarks/<%= bmark.id %>/edit">Edit</a></td>
+      <td><a href="/bmarks/<%= bmark.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

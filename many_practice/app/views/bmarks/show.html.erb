@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>
+        <a href="<%= @bmark.url %>">Google</a>
+        <small>lets you search for stuff</small>
+      </h1>
+    </div>
+  </div>
+</div>
+
+<h1>User #<%= @bmark.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @bmark.name %></p>
+</div>
+<div>
+  <strong>Url</strong>:<br />
+  <p><%= @bmark.url %></p>
+</div>
+<div>
+  <strong>Desc</strong>:<br />
+  <p><%= @bmark.desc %></p>
+</div>
+<div>
+  <strong>User</strong>:<br />
+  <p><%= @bmark.user_id %></p>
+</div>
+
+<a href="/bmarks/<%= @bmark.id %>/edit">Edit</a> |
+<a href="/bmarks/<%= @bmark.id %>/destroy">Destroy</a>

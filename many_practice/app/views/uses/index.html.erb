@@ -1,0 +1,29 @@
+<h1>Uses</h1>
+
+<p><a href="/new_use">Add a New Use</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @uses.each do |use| %>
+    <tr>
+          <td><%= use.name %></td>
+          <td><%= use.email %></td>
+          <td><a href="/uses/<%= use.id %>">Show</a>
+        </td>
+      <td><a href="/uses/<%= use.id %>/edit">Edit</a></td>
+      <td><a href="/uses/<%= use.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
